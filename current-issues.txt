@@ -1,0 +1,2 @@
+- Centering the .container so that it starts in the center of the screen and opens down
+- Making the accordion panels exclusive - JS code needs revisiting

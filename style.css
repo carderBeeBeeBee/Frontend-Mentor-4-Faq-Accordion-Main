@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "Work Sans";
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+    font-weight: 400 600 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    color: #8c6991;
+}
+
+body {
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    width: 100%;
+    background-color: #f9f0ff;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 525px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 40% auto;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 25px 40px 0px #2f153333;
+}
+
+.heading {
+    display: flex;
+}
+
+#star {
+    width: 25px;
+}
+
+h2 {
+    margin-left: 20px;
+    font-size: 2rem;
+}
+
+h2, button {
+    color: #2f1533;
+}
+
+button {
+    background-color: white;
+    border: none;
+    font-family: "Work Sans";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.accordion > img {
+    margin-left: 35px;
+    content: url("./assets/images/icon-plus.svg");
+}
+
+button:hover {
+    cursor: pointer;
+    color: #ad28eb;
+}
+
+button:focus-visible {
+    outline: solid 2px #2f1533;
+    border-radius: 5px;
+}
+
+a:focus-visible {
+    outline: solid 2px #2f1533;
+    border-radius: 3px;
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.6s ease-out;
+}
+
+.hidden > p {
+    overflow: hidden;
+}
+
+.active {
+    margin-bottom: 20px;
+    grid-template-rows: 1fr;
+}
+
+.open > img {
+    content: url("./assets/images/icon-minus.svg")
+}
+
+hr {
+    border: solid 1px #f9f0ff;
+}
+
+.attribution { 
+    margin-top: 20px;
+    font-size: 0.6rem; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 576px) {
+    body {
+        background-image: url("./assets/images/background-pattern-desktop.svg");
+    }
+
+    .container {
+        border-radius: 15px;
+        padding: 30px;
+        margin: 14% auto;
+    }
+
+    .button-icon {
+        margin-left: 0;
+    }
+
+    #star {
+        width: 35px;
+    }
+    
+    h2 {
+        font-size: 3.1rem;
+    }
+}
